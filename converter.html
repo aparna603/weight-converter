@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>weight converter</title>
+	<style>
+		body{
+			margin-top: 70px;
+		    text-align: left;
+		    background-color: gray;
+		}
+	</style>
+</head>
+<body>
+	<div class="jumbotron">
+	 <div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 class="display-4 mb-3"> Weight converter</h1>
+				<form>
+				    <div class="form-group">
+					  <input id="lbsinput" type="number" class="form-control form-control-lg" placeholder="Enter pounds" onclick="validateform()">
+					</div>
+				</form>
+
+
+				<div id="output">
+
+					 <div class="card mb-2" >
+						<div class="card-block">
+		                   <h4>Grams:</h4>
+					       <div id="ginput"></div>
+					    </div>
+				     </div>
+
+				     <div class="card mb-2">
+				        <div class="card-block">
+					       <h4>Kilograms:</h4>
+					       <div id="kginput"></div>
+					    </div>
+				     </div>
+
+				     <div class="card card-success mb-2">
+				        <div class="card-block">
+						   <h4>Ounces:</h4>
+					       <div id="ozinput"></div>
+					    </div>
+				     </div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+</div>
+<script>
+	document.getElementById('lbsinput').addEventListener('input',function(e){
+
+		let lbs = e.target.value;
+		document.getElementById('ginput').innerHTML=lbs/0.0022046;
+		document.getElementById('kginput').innerHTML=lbs/2.2046;
+        document.getElementById('ozinput').innerHTML=lbs*16;
+
+
+	});
+	
+	
+
+	
+</script>
+	            
+
+
+</body>
+</html>
